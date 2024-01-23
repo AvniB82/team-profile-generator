@@ -118,11 +118,12 @@ function menu() {
     } else {
 
       const html = render(teamMembers);
+      fs.writeFileSync (outputPath, html);
 
       console.log('HTML generated successfully!');
+
     }
   });
 }
 
-// Start the application
 addManager();
